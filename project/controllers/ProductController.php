@@ -4,7 +4,8 @@ namespace Project\Controllers;
 
 class ProductController extends \Core\Controller
 {
-    public string $title = 'Product';
+
+
     private array $products = [
  1 => [
 'name'     => 'product1',
@@ -46,6 +47,7 @@ class ProductController extends \Core\Controller
 
     public function all()
     {
+        $this->title =  'Product';
         return $this->render('product/all',['arrs' =>  $this->products]);
     }
 

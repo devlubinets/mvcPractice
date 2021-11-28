@@ -16,7 +16,8 @@
 //        new Route('/user/first/:numbers', 'user', 'first'),
 //        new Route('/act', 'page', 'act'),
 //        new Route('/product/:n', 'product', 'show'),
-        new Route('/product/all', 'product', 'all'),
+//        new Route('/product/all', 'product', 'all'),
+        new Route('/page/all', 'page', 'show')
         ];
 
 	
