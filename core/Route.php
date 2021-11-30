@@ -3,11 +3,16 @@
 	
 	class Route
 	{
-		private $path;
-		private $controller;
-		private $action;
-		
-		public function __construct($path, $controller, $action)
+		private string $path;
+		private string $controller;
+		private string $action;
+
+        /**
+         * @param string $path
+         * @param string $controller
+         * @param string $action
+         */
+		public function __construct(string $path, string $controller, string $action)
 		{
 			$this->path = $path;
 			$this->controller = $controller;
