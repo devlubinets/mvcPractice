@@ -4,11 +4,11 @@ namespace Core;
 
 class Dispatcher
 {
-    public function getPage(Track $track)
+    public function getPage(Track $track):Page
     {
         $className = ucfirst($track->controller) . "Controller";
         $fullName = "\\Project\\Controllers\\$className";
 
-        $currentController = (new $fullName)->{$track->action}($track->params);
+      return  $currentController = (new $fullName)->{$track->action}($track->params);
     }
 }

@@ -4,12 +4,18 @@ namespace Core;
 
 class Page
 {
-    private string $layout;
-    private string $title;
+    private string $layout = 'default';
+    private string $title = 'default';
     private string $view;
-    private string $data;
+    private array $data;
 
-    public function __construct(string $layout,string $title,string $view,string $data)
+    /**
+     * @param string $layout
+     * @param string $title
+     * @param string $view
+     * @param array $data
+     */
+    public function __construct(string $layout,string $title,string $view,array $data)
     {
         $this->layout = $layout;
         $this->title  = $title;
