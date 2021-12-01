@@ -6,8 +6,8 @@ use Core\Controller;
 
 class TestController extends Controller
 {
-    public function index($params)
+    public function index()
     {
-        echo '<br>'."${params['var1']} and ${params['var2']}";
+        echo '<br>'."Hi I am" . __CLASS__ . "and action's name" . __METHOD__;
     }
 }

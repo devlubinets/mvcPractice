@@ -4,12 +4,12 @@ namespace Core;
 
 class Page
 {
-    private $layout;
-    private $title;
-    private $view;
-    private $data;
+    private string $layout;
+    private string $title;
+    private string $view;
+    private string $data;
 
-    public function __construct($layout, $title, $view, $data)
+    public function __construct(string $layout,string $title,string $view,string $data)
     {
         $this->layout = $layout;
         $this->title  = $title;
@@ -17,7 +17,7 @@ class Page
         $this->data   = $data;
     }
 
-    public function __get($property)
+    public function __get(string $property)
     {
         return $this->$property;
     }

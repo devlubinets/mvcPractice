@@ -13,7 +13,7 @@ class Track
      * @param string $action
      * @param array $params
      */
-    public function __construct(string $controller, string $action, array $params)
+    public function __construct(string $controller, string $action, array $params = [])
     {
         $this->controller = $controller;
         $this->action = $action;

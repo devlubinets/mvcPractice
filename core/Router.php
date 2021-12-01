@@ -11,23 +11,21 @@ class Router
         }
 
         foreach ($routes as $currentRow) {
-            if($currentRow === $uri) {
-                $params =  $this->getParams($currentRow ,$uri);
-
-
-                return new Track($currentRow->controller, $currentRow->action, $params);
-            } else {
-                return new Track('error','notFound');
+            if($currentRow->__get('path') === $uri) {
+                //TODO реализовать позже выборку параметров
+                //$params =  $this->getParams($currentRow ,$uri);
+                return new Track($currentRow->controller, $currentRow->action /*$params*/);
             }
         }
+        return new Track('error','notFound');
     }
 
-    private function getParams(string $currentRow, string $uri):array
-    {
-        $key = explode('\\',$currentRow);
-        $value = explode('\\:',$uri);
-
-        return array_combine($key,$value);
-    }
+//    private function getParams(string $currentRow, string $uri):array
+//    {
+//        $key = explode('\\',$currentRow);
+//        $value = explode('\\:',$uri);
+//
+//        return array_combine($key,$value);
+//    }
 
 }
