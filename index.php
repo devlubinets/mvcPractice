@@ -3,6 +3,7 @@
 namespace Core;
 
 require_once 'vendor/autoload.php';
+require_once 'project/config/connection.php';
 
 $routes = require $_SERVER['DOCUMENT_ROOT'] . '/project/config/routes.php';
 
