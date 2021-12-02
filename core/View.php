@@ -8,7 +8,7 @@ class View
      * @param Page $page
      * @return false|string|void
      */
-    public function render(Page $page)
+    public function render(Page $page):string
     {
         return $this->renderLayout($page, $this->renderView($page));
     }
@@ -18,7 +18,7 @@ class View
      * @param Page $page
      * @param $content
      */
-    private function renderLayout(Page $page, $content)
+    private function renderLayout(Page $page, $content):string
     {
         $documentRoot = $_SERVER['DOCUMENT_ROOT'];
         $layoutPath = $documentRoot . '/project/layouts/'."{$page->layout}.php";
@@ -34,7 +34,7 @@ class View
      * Получает файл представления и подставляет в него данные полученные от Модели
      * @param Page $page
      */
-    private function renderView(Page $page)
+    private function renderView(Page $page):string
     {
         $documentRoot = $_SERVER['DOCUMENT_ROOT'];
         $viewPath = $documentRoot . '/project/view/'."{$page->view}.php";
