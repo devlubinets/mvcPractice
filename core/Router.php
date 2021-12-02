@@ -4,7 +4,7 @@ namespace Core;
 
 class Router
 {
-    public function getTrack(array $routes = [], string $uri = '')
+    public function getTrack(array $routes = [], string $uri = ''):Track
     {
         if (empty($routes)) {
             //TODO обработчик ошибки или завершить анализ потому что нет роутов
@@ -19,13 +19,5 @@ class Router
         }
         return new Track('error','notFound');
     }
-
-//    private function getParams(string $currentRow, string $uri):array
-//    {
-//        $key = explode('\\',$currentRow);
-//        $value = explode('\\:',$uri);
-//
-//        return array_combine($key,$value);
-//    }
 
 }
