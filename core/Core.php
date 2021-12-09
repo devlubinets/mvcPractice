@@ -14,6 +14,6 @@ class Core
 
         $str =  (new View) -> render($page);
 
-        echo $str;
+       // echo $str;
     }
 }

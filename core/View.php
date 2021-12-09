@@ -18,7 +18,7 @@ class View
      * @param Page $page
      * @param $content
      */
-    private function renderLayout(Page $page, $content):string
+    private function renderLayout(Page $page, $content)
     {
         $documentRoot = $_SERVER['DOCUMENT_ROOT'];
         $layoutPath = $documentRoot . '/project/layouts/'."{$page->layout}.php";
@@ -34,16 +34,16 @@ class View
      * Получает файл представления и подставляет в него данные полученные от Модели
      * @param Page $page
      */
-    private function renderView(Page $page):string
+    private function renderView(Page $page)
     {
         $documentRoot = $_SERVER['DOCUMENT_ROOT'];
         $viewPath = $documentRoot . '/project/view/'."{$page->view}.php";
 
-        if(file_exists($viewPath)) {
-            extract($page->data);
+
+            $data = $page->getData();
             $view = require $viewPath;
-            return $view;
-        }
+           # return $viewPath;
+
     }
 
 }

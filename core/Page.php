@@ -27,4 +27,9 @@ class Page
     {
         return $this->$property;
     }
+
+    public function getData():array
+    {
+        return $this->data;
+    }
 }

@@ -1,3 +1,2 @@
 <h1>Test view</h1>
-<?= $id ?>
-<?= $name ?>
+id = <?= $id ?>  name = <?= $name_page ?>
